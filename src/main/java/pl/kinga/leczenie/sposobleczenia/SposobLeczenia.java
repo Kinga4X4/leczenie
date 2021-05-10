@@ -1,4 +1,6 @@
-package pl.kinga.leczenie;
+package pl.kinga.leczenie.sposobleczenia;
+
+import pl.kinga.leczenie.specyfik.Specyfik;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +12,7 @@ import java.util.List;
 public class SposobLeczenia {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     private String name;
     @OneToMany(mappedBy = "sposobLeczenia")
     private List<Specyfik> specyfikList;
@@ -18,17 +20,17 @@ public class SposobLeczenia {
     public SposobLeczenia() {
     }
 
-    public SposobLeczenia(long id, String name, List<Specyfik> specyfikList) {
+    public SposobLeczenia(Long id, String name, List<Specyfik> specyfikList) {
         this.id = id;
         this.name = name;
         this.specyfikList = specyfikList;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

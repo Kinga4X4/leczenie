@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf">
+<head>
+    <meta charset="UTF-8">
+    <title>Naturalne metody leczenia</title>
+</head>
+<body>
+<h1>Naturalne metody leczenia</h1>
+<ul>
+    <li th:each="specyfik: ${specyfiki}">
+        <a href="'/specyfik/' + ${specyfik.id}" th:text="${specyfik.name}"></a>
+    </li>
+</ul>
+</body>
+</html>
