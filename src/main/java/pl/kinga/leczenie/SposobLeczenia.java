@@ -12,7 +12,7 @@ public class SposobLeczenia {
     @GeneratedValue
     private long id;
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "sposobLeczenia")
     private List<Specyfik> specyfikList;
 
     public SposobLeczenia() {
