@@ -10,7 +10,7 @@ public class Specyfik {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String nazwa;
 
     @Enumerated(EnumType.STRING)
     private Jednostka jednostka;
@@ -20,9 +20,9 @@ public class Specyfik {
     @ManyToOne
     private SposobLeczenia sposobLeczenia;
 
-    public Specyfik(Long id, String name, Jednostka jednostka, double ilosc, String dawkowanie, SposobLeczenia sposobLeczenia) {
+    public Specyfik(Long id, String nazwa, Jednostka jednostka, double ilosc, String dawkowanie, SposobLeczenia sposobLeczenia) {
         this.id = id;
-        this.name = name;
+        this.nazwa = nazwa;
         this.jednostka = jednostka;
         this.ilosc = ilosc;
         this.dawkowanie = dawkowanie;
@@ -40,12 +40,12 @@ public class Specyfik {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNazwa() {
+        return nazwa;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
     }
 
     public Jednostka getJednostka() {
@@ -82,7 +82,7 @@ public class Specyfik {
 
     @Override
     public String toString() {
-        return id + name +  jednostka + ilosc + dawkowanie + sposobLeczenia;
+        return id + nazwa +  jednostka + ilosc + dawkowanie + sposobLeczenia;
     }
 }
 

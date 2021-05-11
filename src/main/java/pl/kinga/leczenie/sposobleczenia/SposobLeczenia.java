@@ -13,16 +13,15 @@ public class SposobLeczenia {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    private String nazwa;
     @OneToMany(mappedBy = "sposobLeczenia")
     private List<Specyfik> specyfikList;
 
     public SposobLeczenia() {
     }
 
-    public SposobLeczenia(Long id, String name, List<Specyfik> specyfikList) {
-        this.id = id;
-        this.name = name;
+    public SposobLeczenia(String nazwa, List<Specyfik> specyfikList) {
+        this.nazwa = nazwa;
         this.specyfikList = specyfikList;
     }
 
@@ -34,12 +33,12 @@ public class SposobLeczenia {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNazwa() {
+        return nazwa;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
     }
 
     public List<Specyfik> getSpecyfikList() {

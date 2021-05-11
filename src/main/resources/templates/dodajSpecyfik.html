@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj specyfik</title>
+</head>
+<body>
+
+<form action="/specyfik/dodaj" th:object="${specyfik}" method="post">
+    <input type="text" th:field="*{nazwa}" placeholder="nazwa"/>
+    <input type="text" th:field="*{jednostka}" placeholder="nazwa"/>
+    <input type="text" th:field="*{ilosc}" placeholder="nazwa"/>
+    <input type="text" th:field="*{dawkowanie}" placeholder="nazwa"/>
+    <select th:field="*{sposobLeczenia}">
+        <option th:each="sposobLeczenia: ${sposobyLeczenia}" th:text="${sposobLeczenia.nazwa}" th:value="${sposobLeczenia.id}"></option>
+    </select>
+    <input type="submit" value="dodaj!"/>
+</form>
+</body>
+</html>
