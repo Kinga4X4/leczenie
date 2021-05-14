@@ -3,6 +3,7 @@ package pl.kinga.leczenie.specyfik;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.kinga.leczenie.sposobleczenia.SposobLeczenia;
@@ -19,6 +20,12 @@ public class SpecyfikController {
     public SpecyfikController(SposobLeczeniaRepository sposobLeczeniaRepository, SpecyfikRepository specyfikRepository) {
         this.sposobLeczeniaRepository = sposobLeczeniaRepository;
         this.specyfikRepository = specyfikRepository;
+    }
+
+    @GetMapping("/SposobLeczeniaZnajdz")
+    public String metodyLeczenia(Model model, SposobLeczenia sposobLeczenia) {
+        model.addAttribute("specyfik", specyfikRepository.findBySposobLeczenia(sposobLeczenia));
+        return "metodyLeczenia";
     }
 
     @GetMapping("/specyfik/dodaj")

@@ -10,13 +10,15 @@
 </head>
 
 <body>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v10.0"
+        nonce="CNdx9s3S">
+
+</script>
 <div id="container">
     <h1>Naturalne metody leczenia
     </h1>
-    <p>Natura wyposażyła nas we wszystko, czego potrzebujemy, aby radzić sobie z dolegliwościami, które mogą się
-        pojawić, skorzystajmy z tego.
-        Są to rozwiązania lepiej odpowiadające naszym ciałom niż ich syntetyczne odpowiedniki.
-    </p>
 
     <div id="logo">
 
@@ -31,22 +33,17 @@
                 <a th:href="'/sposobLeczenia/' + ${sposobLeczenia.id}|"
                    th:text="${sposobLeczenia.nazwa}">
                 </a>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
+                     data-layout="box_count" data-action="like" data-size="small" data-share="false"></div>
+                <p><img src="x.jpg" alt="jakies zdjecie" width="42" height="42" style="vertical-align:bottom"></p>
             </li>
         </ul>
     </h3>
-    <p>
-        Koncerny farmaceutyczne prowadzą testy i badania na temat skuteczności naturalnej substancji dla danej
-        choroby.
-        Gdy stwierdzą, że wyniki są pozytywne, tworzą syntetyczną wersję tej samej substancji i opatentowują tak,
-        aby produkt nadawał się do sprzedaży. Wersja syntetyczna może działać szybciej, czasem może także działać
-        lepiej
-        – jeśli substancja naturalna jest złej jakości. Ale koszty zdrowotne, które ponosimy, używając wersji
-        syntetycznej,
-        często nie są warte żadnego kompromisu.
-    </p>
+
     <div id="footer">
         Twoje zdrowie, w Twoich rękach! Zamień chemię na naturalne środki a Twój organizm Ci podziękuje.
     </div>
+    <a href="/">Powrót do strony głównej</a>
 </div>
 </body>
 </html>
