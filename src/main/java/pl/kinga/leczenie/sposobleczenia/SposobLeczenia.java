@@ -1,11 +1,6 @@
 package pl.kinga.leczenie.sposobleczenia;
-
 import pl.kinga.leczenie.specyfik.Specyfik;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -14,7 +9,7 @@ public class SposobLeczenia {
     @GeneratedValue
     private Long id;
     private String nazwa;
-    @OneToMany(mappedBy = "sposobLeczenia")
+    @OneToMany(mappedBy = "sposobLeczenia", cascade = CascadeType.REMOVE)
     private List<Specyfik> specyfikList;
 
     public SposobLeczenia() {

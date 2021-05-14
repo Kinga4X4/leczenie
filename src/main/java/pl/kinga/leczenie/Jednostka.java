@@ -1,7 +1,6 @@
 package pl.kinga.leczenie;
 
 public enum Jednostka {
-
     LYZKA,
     LYZECZKA,
     MILILITR,
@@ -9,5 +8,5 @@ public enum Jednostka {
     GRAM,
     SZTUKA,
     KROPLA,
-    SZKLANKA
+    SZKLANKA;
 }

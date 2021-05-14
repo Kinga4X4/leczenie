@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf">
+<html lang="pl" xmlns:th="http://www.thymeleaf" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Dodaj specyfik</title>
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<h1>Dodaj specyfik</h1>
+<form method="post" th:action="@{/specyfik/dodaj}" th:object="${specyfik}">
 
-<form action="/specyfik/dodaj" th:object="${specyfik}" method="post">
-    <input type="text" th:field="*{nazwa}" placeholder="nazwa"/>
-    <input type="text" th:field="*{jednostka}" placeholder="nazwa"/>
-    <input type="text" th:field="*{ilosc}" placeholder="nazwa"/>
-    <input type="text" th:field="*{dawkowanie}" placeholder="nazwa"/>
+    <input type="text" th:field="*{nazwa}" placeholder="nazwa"/><br>
+    <select th:field="*{jednostka}">
+        <option th:value="${jednostka}"
+                th:each="jednostka: ${T(pl.kinga.leczenie.Jednostka).values()}"
+                th:text="${jednostka.name()}">
+        </option>
+    </select>
+
+    <input type="number" step="0.1" th:field="*{ilosc}" placeholder="ilosc"/>
+    <input type="text" th:field="*{dawkowanie}" placeholder="dawkowanie"/>
     <select th:field="*{sposobLeczenia}">
-        <option th:each="sposobLeczenia: ${sposobyLeczenia}" th:text="${sposobLeczenia.nazwa}" th:value="${sposobLeczenia.id}"></option>
+        <option th:each="sposobLeczenia: ${sposobyLeczenia}" th:text="${sposobLeczenia.nazwa}" th:value="${sposobLeczenia.id}">
+        </option>
     </select>
     <input type="submit" value="dodaj!"/>
+    </div>
 </form>
+
+<a href="/">Powrót do strony głównej</a>
 </body>
 </html>

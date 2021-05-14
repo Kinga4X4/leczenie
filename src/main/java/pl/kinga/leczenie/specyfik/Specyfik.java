@@ -14,14 +14,12 @@ public class Specyfik {
 
     @Enumerated(EnumType.STRING)
     private Jednostka jednostka;
-
     private double ilosc;
     private String dawkowanie;
     @ManyToOne
     private SposobLeczenia sposobLeczenia;
 
-    public Specyfik(Long id, String nazwa, Jednostka jednostka, double ilosc, String dawkowanie, SposobLeczenia sposobLeczenia) {
-        this.id = id;
+    public Specyfik(String nazwa, Jednostka jednostka, double ilosc, String dawkowanie, SposobLeczenia sposobLeczenia) {
         this.nazwa = nazwa;
         this.jednostka = jednostka;
         this.ilosc = ilosc;
