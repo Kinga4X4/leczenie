@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="k.paszkiewicz" id="001-init">
+
+        <createTable tableName="sposob_leczenia">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nazwa" type="varchar(255)">
+            </column>
+        </createTable>
+
+        <createTable tableName="specyfik">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nazwa" type="varchar(255)">
+            </column>
+            <column name="jednostka" type="varchar(255)">
+            </column>
+            <column name="ilosc" type="double">
+            </column>
+            <column name="dawkowanie" type="varchar(500)">
+            </column>
+            <column name="sposob_leczenia_id" type="bigint">
+                <constraints nullable="false"
+                             foreignKeyName="fk_specyfik_sposob_leczenia_id"
+                             referencedTableName="sposob_leczenia"
+                             referencedColumnNames="id"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="uzytkownik">
+            <column name="id" type="bigint">
+            </column>
+            <column name="imie" type="varchar(255)">
+            </column>
+            <column name="nazwisko" type="varchar(255)">
+            </column>
+            <column name="data_urodzenia" type="date">
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
