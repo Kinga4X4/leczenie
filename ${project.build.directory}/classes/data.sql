@@ -9,8 +9,3 @@ VALUES (1,'DMSO', 'MILILITR', 2.0, '2 razy dziennie, roztwór wlać do kieliszka
 (4, 'olej rycynowy','MILILITR', 5.0, 'raz dziennie, wsmaruj w zmienione miejsca i zawiń folią', 6),
 (5, 'demanosa', 'MILIGRAM', 3.0, '2 razy dziennie, rozpuść w niegazowanej wodzie i wypij', 1),
 (6,'olej kokosowy z dodatkiem kropli płynu lugola', 'LYZKA', 1.0, 'raz dziennie, smarowac zmienione miejsca', 5);
-
-INSERT INTO uzytkownik (id, imie, nazwisko, data_urodzenia)
-VALUES (1, 'Kinga', 'Kulig', '1986-04-29'),
-       (2, 'Marcin', 'Jakis', '1983-09-13'),
-       (3, 'Jolanta', 'Kombinacja', '1991-05-15');
