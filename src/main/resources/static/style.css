@@ -18,9 +18,11 @@ font-size:44px;
 {
 
 }
+
 body
 {
-background-image: url("https://zwrotnik.b-cdn.net/wp-content/uploads/2017/01/leczenie-niekonwencjonalne-raka.jpg" bgproperties="fixed");
+background: image: url(image/glowne.jpg);
+background-attachment: fixed;
 background-color:gray;
 font-family:Verdana;
 font-size:20px;
