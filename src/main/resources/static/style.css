@@ -1,53 +1,49 @@
-#container
-{
-width:900px;
-margin-left:auto;
-margin-right:auto;
+#container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
-#logo
-{
-margin-top:20px;
-font-size:44px;
+
+#logo {
+    margin-top: 20px;
+    font-size: 44px;
 }
-#menu
-{
+
+#menu {
 
 }
 
-#footer
-{
+#footer {
 
 }
-body
-{
-background-image: url("/images/glowne.png");
-background-color:gray;
-font-family:Verdana;
-font-size:20px;
-color:black;
+
+body {
+    background-image: url("/images/glowne.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    background-color: gray;
+    font-family: Verdana;
+    font-size: 20px;
+    color: black;
 }
 
-h1
-{
-font-size:45px
+h1 {
+    font-size: 45px
 }
 
-a:link
-{
-color:firebrick;
+a:link {
+    color: firebrick;
 }
 
-a:visited
-{
-color:firebrick;
+a:visited {
+    color: firebrick;
 }
 
-a:hover
-{
-color:green;
+a:hover {
+    color: green;
 }
 
-p
-{
-font-style: oblique;
+p {
+    font-style: oblique;
 }

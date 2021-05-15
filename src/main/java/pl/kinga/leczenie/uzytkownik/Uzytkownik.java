@@ -1,4 +1,4 @@
-package pl.kinga.leczenie;
+package pl.kinga.leczenie.uzytkownik;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -16,6 +16,20 @@ public class Uzytkownik {
     private String nazwisko;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate data_urodzenia;
+
+    private String email;
+    private boolean is_newsletter;
+
+    public Uzytkownik() {
+    }
+
+    public Uzytkownik(String imie, String nazwisko, LocalDate data_urodzenia, String email, boolean is_newsletter) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.data_urodzenia = data_urodzenia;
+        this.email = email;
+        this.is_newsletter = is_newsletter;
+    }
 
     public Long getId() {
         return id;
@@ -47,5 +61,21 @@ public class Uzytkownik {
 
     public void setData_urodzenia(LocalDate data_urodzenia) {
         this.data_urodzenia = data_urodzenia;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isIs_newsletter() {
+        return is_newsletter;
+    }
+
+    public void setIs_newsletter(boolean is_newsletter) {
+        this.is_newsletter = is_newsletter;
     }
 }
