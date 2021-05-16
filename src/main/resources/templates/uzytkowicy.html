@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista uzytkowników</title>
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="container">
+
+    <h1> Lista użytkowników</h1>
+    <h3>
+        <ul class="list-group list-group-flush">
+            <li th:each="uzytkownik: ${uzytkownicy}">
+                <a th:href="'/uzytkownik/' + ${uzytkownik.id}|"
+                   th:text="|${uzytkownik.imie} ${uzytkownik.nazwisko}|">
+                </a>
+            </li>
+        </ul>
+    </h3>
+    <div id="footer">
+    <div>
+        <a href="/uzytkownik/dodaj">Dodaj użytkownika</a><br>
+        <a href="/">Powrót do strony głównej</a>
+        </footer>
+    </div>
+    </div>
+</div>
+</body>
+</html>
