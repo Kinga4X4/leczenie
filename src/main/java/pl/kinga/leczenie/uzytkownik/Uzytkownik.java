@@ -4,19 +4,19 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
 public class Uzytkownik {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String imie;
     private String nazwisko;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate data_urodzenia;
-
     private String email;
     private boolean is_newsletter;
 

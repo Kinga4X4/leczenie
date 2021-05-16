@@ -12,17 +12,17 @@
     <input type="text" th:field="*{imie}" placeholder="imie"/>
     <input type="text" th:field="*{nazwisko}" placeholder="nazwisko"/>
     <input type="date" th:field="*{data_urodzenia}" placeholder="data urodzenia"/>
-    <input type="email" th:field="*{email}" placeholder="e-mail"/>
+    <input type="text" th:field="*{email}" placeholder="e-mail"/>
 
     <select class="form-control" th:field="*{is_newsletter}">
-        <option th:value="true" data-th-field="*{is_newsletter}">true</option>
-        <option th:value="false" data-th-field="*{is_newsletter}">false</option>
+        <option th:value="true">true</option>
+        <option th:value="false">false</option>
     </select>
 
     <input type="submit" value="dodaj!"/>
-    </div>
 </form>
-
+<div>
 <a href="/">Powrót do strony głównej</a>
+</div>
 </body>
 </html>

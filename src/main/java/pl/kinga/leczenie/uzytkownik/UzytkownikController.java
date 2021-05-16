@@ -4,18 +4,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import pl.kinga.leczenie.specyfik.Specyfik;
-import pl.kinga.leczenie.sposobleczenia.SposobLeczenia;
 
-import java.util.Optional;
 
 @Controller
-public class UżytkownikController {
+public class UzytkownikController {
 
     UzytkownikRepository uzytkownikRepository;
 
-    public UżytkownikController(UzytkownikRepository uzytkownikRepository) {
+    public UzytkownikController(UzytkownikRepository uzytkownikRepository) {
         this.uzytkownikRepository = uzytkownikRepository;
     }
 
@@ -27,7 +23,6 @@ public class UżytkownikController {
 
     @GetMapping("/uzytkownik/dodaj")
     public String addForm(Model model) {
-        Uzytkownik uzytkownik = new Uzytkownik();
         model.addAttribute("uzytkownik", new Uzytkownik());
         return "dodajUzytkownika";
     }
@@ -35,7 +30,7 @@ public class UżytkownikController {
     @PostMapping("/uzytkownik/dodaj")
     public String addForm(Uzytkownik uzytkownik) {
         uzytkownikRepository.save(uzytkownik);
-        return "redirect:/uzytkownik/" + uzytkownik.getId();
+        return "redirect:/uzytkownik";
     }
 
 }

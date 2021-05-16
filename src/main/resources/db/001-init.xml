@@ -36,7 +36,8 @@
         </createTable>
 
         <createTable tableName="uzytkownik">
-            <column name="id" type="bigint">
+            <column name="id" autoIncrement="true" type="bigint">
+                <constraints primaryKey="true"/>
             </column>
             <column name="imie" type="varchar(255)">
             </column>

@@ -7,12 +7,13 @@
 
     <changeSet author="k.paszkiewicz" id="002-newsletter">
         <addColumn tableName="uzytkownik">
-            <column name="email" type="varchar(100)">
-            </column>
-            <column name="is_newsletter" type="boolean" defaultValueBoolean="true">
-                   <constraints nullable="false"/>
+            <column name="email" type="varchar(255)">
             </column>
         </addColumn>
-
+        <addColumn tableName="uzytkownik">
+            <column name="is_newsletter" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
     </changeSet>
 </databaseChangeLog>

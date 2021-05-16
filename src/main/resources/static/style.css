@@ -1,7 +1,10 @@
 #container {
-    width: 900px;
+    width: 66%;
+    height: 66%;
     margin-left: auto;
     margin-right: auto;
+    background: linear-gradient(rgba(190,190,190,.6),rgba(190,190,190,.6));
+    background-repeat: no-repeat;
 }
 
 #logo {
@@ -18,19 +21,21 @@
 }
 
 body {
-    background-image: url("/images/glowne.png");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-image: url("/images/ziola.jpg");
     background-size: cover;
-    background-color: gray;
     font-family: Verdana;
-    font-size: 20px;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 h1 {
+    margin: auto;
     font-size: 45px
 }
+
 
 a:link {
     color: firebrick;
@@ -46,4 +51,11 @@ a:hover {
 
 p {
     font-style: oblique;
+}
+
+ul > li
+{
+  float: left;
+    width: 150px;
+    height: 50px
 }

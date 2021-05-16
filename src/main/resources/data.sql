@@ -11,7 +11,7 @@ VALUES (1,'DMSO', 'MILILITR', 2.0, '2 razy dziennie, roztwór wlać do kieliszka
 (6,'olej kokosowy z dodatkiem kropli płynu lugola', 'LYZKA', 1.0, 'raz dziennie, smarowac zmienione miejsca', 5);
 
 INSERT INTO uzytkownik (id, imie, nazwisko, data_urodzenia, email, is_newsletter)
-VALUES (1, 'Kinga', 'Kulig', '1986-04-29', 'kinga_k@gmail.com', 'true'),
-       (2, 'Marcin', 'Jakis', '1983-09-13', 'mjakis@wp.com', 'false'),
-       (3, 'Jolanta', 'Kombinacja', '1991-05-15', 'j.kombin@tlen.pl', 'false');
+VALUES (1, 'Kinga', 'Kulig', '1986-04-29', 'kinga_k@gmail.com', true),
+       (2, 'Marcin', 'Jakis', '1983-09-13', 'mjakis@wp.com', false),
+       (3, 'Jolanta', 'Kombinacja', '1991-05-15', 'j.kombin@tlen.pl', false);
 
