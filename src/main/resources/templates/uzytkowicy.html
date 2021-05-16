@@ -7,18 +7,24 @@
 </head>
 <body>
 <div id="container">
-<h3>
-    <ul class="list-group list-group-flush">
-        <li th:each="uzytkownik: ${uzytkownicy}">
-            <a th:href="'/uzytkownik/' + ${uzytkownik.id}|"
-               th:text="|${uzytkownik.imie} ${uzytkownik.nazwisko}|">
-            </a>
 
-        </li>
-    </ul>
-</h3>
-    <a href="/uzytkownik/dodaj">Dodaj użytkownika</a>
-<a href="/">Powrót do strony głównej</a>
+    <h1> Lista użytkowników</h1>
+    <h3>
+        <ul class="list-group list-group-flush">
+            <li th:each="uzytkownik: ${uzytkownicy}">
+                <a th:href="'/uzytkownik/' + ${uzytkownik.id}|"
+                   th:text="|${uzytkownik.imie} ${uzytkownik.nazwisko}|">
+                </a>
+            </li>
+        </ul>
+    </h3>
+    <div id="footer">
+    <div>
+        <a href="/uzytkownik/dodaj">Dodaj użytkownika</a><br>
+        <a href="/">Powrót do strony głównej</a>
+        </footer>
+    </div>
+    </div>
 </div>
 </body>
 </html>

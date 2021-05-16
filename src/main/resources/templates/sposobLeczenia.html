@@ -8,22 +8,29 @@
     <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-<h1 th:text="${sposobLeczenia.nazwa}"></h1>
-
-<ul>
-    <li th:each="specyfik: ${sposobLeczenia.specyfikList}">
-        <a th:href="'/specyfik/' + ${specyfik.id}|"
-           th:text="|${specyfik.nazwa} jednostka: ${specyfik.jednostka} ilość: ${specyfik.ilosc} dawkowanie: ${specyfik.dawkowanie}|"></a><br><br>
-    </li>
-</ul>
-<br>
-<a th:href="|/specyfik/dodaj?sposobLeczeniaId=${sposobLeczenia.id}|">Dodaj kolejny specyfik</a><br>
-<br>
-<br>
-<!--<a th:href="#">Edytuj specyfik</a><br>-->
-<br>
-<a th:href="|/sposobLeczenia/usun=${sposobLeczenia.id}|">Usuń sposób leczenia</a><br>
-<a href="/">Powrót do strony głównej</a>
+<div id="container">
+    <div>
+        <h1 th:text="${sposobLeczenia.nazwa}"></h1>
+    </div>
+    <br>
+    <div>
+        <ul>
+            <li th:each="specyfik: ${sposobLeczenia.specyfikList}">
+                <a th:href="'/specyfik/' + ${specyfik.id}|"
+                   th:text="|${specyfik.nazwa} jednostka: ${specyfik.jednostka} ilość: ${specyfik.ilosc} dawkowanie: ${specyfik.dawkowanie}|"></a>
+            </li>
+        </ul>
+    </div>
+    <br>
+<div id="footer">
+    <div class="link">
+        <a th:href="|/specyfik/dodaj?sposobLeczeniaId=${sposobLeczenia.id}|">Dodaj kolejny specyfik</a><br>
+        <a th:href="|/sposobLeczenia/usun=${sposobLeczenia.id}|">Usuń sposób leczenia
+        </a>
+        <a href="/">Powrót do strony głównej</a>
+    </div>
+</div>
+</div>
 </body>
+
 </html>

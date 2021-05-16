@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1>Dodaj użytkownika</h1>
+
 <form method="post" th:action="@{/uzytkownik/dodaj}" th:object="${uzytkownik}">
 
     <input type="text" th:field="*{imie}" placeholder="imie"/>

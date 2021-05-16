@@ -1,9 +1,9 @@
 #container {
-    width: 66%;
-    height: 66%;
+    width: 80%;
+    height: 90%;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(rgba(190,190,190,.6),rgba(190,190,190,.6));
+    background: linear-gradient(rgba(190, 190, 190, .6), rgba(190, 190, 190, .6));
     background-repeat: no-repeat;
 }
 
@@ -17,6 +17,8 @@
 }
 
 #footer {
+    padding: 110px;
+
 
 }
 
@@ -32,8 +34,8 @@ body {
 
 
 h1 {
-    margin: auto;
-    font-size: 45px
+    text-align: center;
+    font-size: 45px;
 }
 
 
@@ -53,9 +55,14 @@ p {
     font-style: oblique;
 }
 
-ul > li
-{
-  float: left;
+ul > li {
+    float: left;
     width: 150px;
     height: 50px
+}
+
+.link{
+
+    margin: 150px;
+    padding-bottom: unset;
 }

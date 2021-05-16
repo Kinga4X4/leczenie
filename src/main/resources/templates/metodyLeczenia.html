@@ -28,6 +28,7 @@
 
     </div>
     <h3>
+
         <ul class="list-group list-group-flush">
             <li th:each="sposobLeczenia: ${sposobyLeczenia}">
                 <a th:href="'/sposobLeczenia/' + ${sposobLeczenia.id}|"
@@ -35,15 +36,21 @@
                 </a>
                 <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
                      data-layout="box_count" data-action="like" data-size="small" data-share="false"></div>
-
             </li>
         </ul>
     </h3>
-
+<br>
     <div id="footer">
         Twoje zdrowie, w Twoich rękach! Zamień chemię na naturalne środki a Twój organizm Ci podziękuje.
+
     </div>
-    <a href="/">Powrót do strony głównej</a>   <a href="/uzytkownik">Uzytkownicy</a>
+    <div>
+        <b><a href="/uzytkownik">Uzytkownicy</a></b><br>
+    </div>
+    <div>
+    <a href="/">Powrót do strony głównej</a>
+    </div>
+
 </div>
 </body>
 </html>
