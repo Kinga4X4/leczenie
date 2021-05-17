@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf">
+<head>
+    <meta charset="UTF-8">
+    <title>Sposób leczenia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<h1 th:text="${sposobLeczenia.nazwa}"></h1>
+
+<ul>
+    <li th:each="specyfik: ${sposobLeczenia.specyfikList}">
+        <a th:href="'/specyfik/' + ${specyfik.id}|"
+           th:text="|${specyfik.nazwa} jednostka: ${specyfik.jednostka} ilość: ${specyfik.ilosc} dawkowanie: ${specyfik.dawkowanie}|"></a><br><br>
+    </li>
+</ul>
+<br>
+<a th:href="|/specyfik/dodaj?sposobLeczeniaId=${sposobLeczenia.id}|">Dodaj kolejny specyfik</a><br>
+<br>
+<br>
+<!--<a th:href="#">Edytuj specyfik</a><br>-->
+<br>
+<a th:href="|/sposobLeczenia/usun=${sposobLeczenia.id}|">Usuń sposób leczenia</a><br>
+<a href="/">Powrót do strony głównej</a>
+</body>
+</html>
