@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Registration form</title>
+</head>
+  <body>
+  <img src="/images/logo.jpg" style="float: left; margin-right: 20px; width: 250px; "/>
+<!--  <p th:if="${showErrorMessage}">Incorrect login!</p>-->
+  <h1>Registration form</h1>
+  <form action="#" method="post" th:action="@{/register}" th:object="${user}">
+      <p th:errors="*{userName}">Email errors</p>
+      <input th:field="*{userName}" type="text" placeholder="User name" /><br />
+      <p th:errors="*{password}">Password errors</p>
+      <input th:field="*{password}" type="password" placeholder="Password" /><br />
+      <input type="submit" value="Register" />
+  </form>
+</body>
+</html>

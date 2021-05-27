@@ -4,7 +4,7 @@
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
-    <title>Naturalne metody leczenia</title>
+    <title>Natural methods of treatment</title>
     <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
 
 </head>
@@ -17,7 +17,7 @@
 
 </script>
 <div id="container">
-    <h1>Naturalne metody leczenia
+    <h1>Natural methods of treatment
     </h1>
 
     <div id="logo">
@@ -30,9 +30,9 @@
     <h3>
 
         <ul class="list-group list-group-flush">
-            <li th:each="sposobLeczenia: ${sposobyLeczenia}">
-                <a th:href="'/sposobLeczenia/' + ${sposobLeczenia.id}|"
-                   th:text="${sposobLeczenia.nazwa}">
+            <li th:each="treatmentWay: ${treatmentWay}">
+                <a th:href="'/treatmentWay/' + ${treatmentWay.id}|"
+                   th:text="${treatmentWay.name}">
                 </a>
                 <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
                      data-layout="box_count" data-action="like" data-size="small" data-share="false"></div>
@@ -45,10 +45,10 @@
 
     </div>
     <div>
-        <b><a href="/uzytkownik">Uzytkownicy</a></b><br>
+        <b><a href="/user">Users</a></b><br>
     </div>
     <div>
-    <a href="/">Powrót do strony głównej</a>
+    <a href="/">Back to main page</a>
     </div>
 
 </div>

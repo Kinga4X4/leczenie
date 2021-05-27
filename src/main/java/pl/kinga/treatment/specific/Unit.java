@@ -1,6 +1,6 @@
-package pl.kinga.leczenie;
+package pl.kinga.treatment.specific;
 
-public enum Jednostka {
+public enum Unit {
     LYZKA,
     LYZECZKA,
     MILILITR,
