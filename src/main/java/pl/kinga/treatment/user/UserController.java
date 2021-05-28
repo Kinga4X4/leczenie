@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
 
-    UserRepository userRepository;
+    private UserService userService;
 
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping("/user")
     public String users(Model model) {
-        model.addAttribute("users", userRepository.findAll());
+        model.addAttribute("users", userService.findAll());
         return "users";
     }
 
@@ -29,7 +29,7 @@ public class UserController {
 
     @PostMapping("/user/add")
     public String addForm(User user) {
-        userRepository.save(user);
+        userService.save(user);
         return "redirect:/user";
     }
 

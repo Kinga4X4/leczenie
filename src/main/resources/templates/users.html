@@ -8,11 +8,12 @@
 <body>
 <div id="container">
 
-    <h1> User List</h1>
+    <h1> User List
+    </h1>
     <h3>
         <ul class="list-group list-group-flush">
             <li th:each="user: ${users}">
-                <a th:href="'/user/' + ${user.id}|"
+                <a th:href="|/user/${user.id}|"
                    th:text="|${user.firstName} ${user.lastName}|">
                 </a>
             </li>
@@ -24,7 +25,6 @@
         </a><br>
         <a href="/">Back to main page
         </a>
-        </footer>
     </div>
     </div>
 </div>

@@ -1,7 +1,5 @@
 package pl.kinga.treatment.user;
-
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
@@ -22,16 +20,7 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<UserRole> roles;
 
-
     public User() {
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public User(String firstName, String lastName, LocalDate dateOfBirth, String email, boolean isNewsletter, String password, String userName, Set<UserRole> roles) {
@@ -101,6 +90,14 @@ public class User {
         this.password = password;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public Set<UserRole> getRoles() {
         return roles;
     }
@@ -109,5 +106,7 @@ public class User {
         this.roles = roles;
     }
 }
+
+
 
 
