@@ -19,7 +19,7 @@ public class User {
     private boolean isNewsletter;
     private String password;
     private String userName;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<UserRole> roles;
 
 

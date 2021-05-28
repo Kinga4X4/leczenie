@@ -8,6 +8,7 @@ import pl.kinga.treatment.user.UserRepository;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class UserService {
@@ -18,16 +19,12 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
     }
-
-    public void registerUser(String userName, String rawPassword) {
-
-        User userToAdd = new User();
-        userToAdd.setUserName(userName);
-        String encryptedPassword = passwordEncoder.encode(rawPassword);
-        List<UserRole> list = Arrays.asList(new UserRole(Role.ROLE_USER, userToAdd));
-        userToAdd.setRoles(new HashSet<>(list));
-        userToAdd.setPassword(encryptedPassword);
-        userRepository.save(userToAdd);
+    public void registerUser(User user, String password) {
+        String encryptedPassword = passwordEncoder.encode(user.getPassword());
+        user.setRoles(Set.of(new UserRole(Role.ROLE_USER, user)));
+        user.setPassword(encryptedPassword);
+        userRepository.save(user);
     }
+
 }
 

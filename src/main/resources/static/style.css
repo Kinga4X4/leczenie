@@ -3,8 +3,6 @@
     height: 90%;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(rgba(190, 190, 190, .6), rgba(190, 190, 190, .6));
-    background-repeat: no-repeat;
 }
 
 #logo {
@@ -18,8 +16,7 @@
 }
 
 #footer {
-    padding: 110px;
-
+    padding: 60px;
 
 }
 
@@ -66,4 +63,17 @@ ul > li {
 
     margin: 150px;
     padding-bottom: unset;
+}
+
+.methods{
+    text-align: center;
+}
+
+.methods img{
+    max-width: 100%;
+    height: auto;
+}
+
+.methods figcaption{
+    margin-top: 8px;
 }

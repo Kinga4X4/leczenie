@@ -20,11 +20,7 @@ public class AuthController {
     @GetMapping("/login")
     public String loginForm(@RequestParam(required = false) String error, Model model) {
         boolean showErrorMessage = false;
-
-        if (error != null) {
-            showErrorMessage = true;
-        }
-        model.addAttribute("showErrorMessage", showErrorMessage);
+        model.addAttribute("showErrorMessage", error != null);
         return "login";
     }
 
@@ -32,7 +28,7 @@ public class AuthController {
     public String register(User user) {
         String userName = user.getUserName();
         String rawPassword = user.getPassword();
-        userService.registerUser(userName, rawPassword);
+        userService.registerUser(user, user.getPassword());
         return "registerSuccess";
     }
 }

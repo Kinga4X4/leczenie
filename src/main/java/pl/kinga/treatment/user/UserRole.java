@@ -10,7 +10,7 @@ public class UserRole {
     @Enumerated(EnumType.STRING)
     private Role role;
     @ManyToOne
-    User user;
+    private User user;
 
     public UserRole() {
     }

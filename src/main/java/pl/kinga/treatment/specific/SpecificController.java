@@ -13,8 +13,8 @@ import java.util.Optional;
 @Controller
 public class SpecificController {
 
-    TreatmentRepository treatmentRepository;
-    SpecificRepository specificRepository;
+    private TreatmentRepository treatmentRepository;
+    private SpecificRepository specificRepository;
 
     public SpecificController(TreatmentRepository treatmentRepository, SpecificRepository specificRepository) {
         this.treatmentRepository = treatmentRepository;
