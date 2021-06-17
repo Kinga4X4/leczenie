@@ -1,9 +1,14 @@
 package pl.kinga.treatment.treatment_way;
+
+import lombok.Getter;
+import lombok.Setter;
 import pl.kinga.treatment.specific.Specific;
 
 import javax.persistence.*;
 import java.util.List;
 
+@Getter
+@Setter
 @Entity
 public class TreatmentWay {
     @Id
@@ -21,27 +26,4 @@ public class TreatmentWay {
         this.specificList = specificList;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String nazwa) {
-        this.name = nazwa;
-    }
-
-    public List<Specific> getSpecificList() {
-        return specificList;
-    }
-
-    public void setSpecificList(List<Specific> specificList) {
-        this.specificList = specificList;
-    }
 }
