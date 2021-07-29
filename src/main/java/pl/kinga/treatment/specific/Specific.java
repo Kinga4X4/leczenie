@@ -1,13 +1,9 @@
 package pl.kinga.treatment.specific;
 
-import lombok.Getter;
-import lombok.Setter;
 import pl.kinga.treatment.treatment_way.TreatmentWay;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
 @Entity
 public class Specific {
     @Id
@@ -33,7 +29,55 @@ public class Specific {
     public Specific() {
     }
 
-     @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Unit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Unit unit) {
+        this.unit = unit;
+    }
+
+    public double getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getDosage() {
+        return dosage;
+    }
+
+    public void setDosage(String dosage) {
+        this.dosage = dosage;
+    }
+
+    public TreatmentWay getTreatmentWay() {
+        return treatmentWay;
+    }
+
+    public void setTreatmentWay(TreatmentWay treatmentWay) {
+        this.treatmentWay = treatmentWay;
+    }
+
+    @Override
     public String toString() {
         return id + name + unit + quantity + dosage + treatmentWay;
     }
