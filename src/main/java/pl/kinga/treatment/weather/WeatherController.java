@@ -8,15 +8,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class WeatherController {
 
+    private final WeatherService weatherService;
+
+    public WeatherController(WeatherService weatherService) {
+        this.weatherService = weatherService;
+    }
+
+    @GetMapping("/index")
+    public String home() {
+        return "index";
+    }
+
     @GetMapping("/weather")
-    public String weather() {
+    public String showWeather(Model model) {
+        model.addAttribute("city", weatherService.weatherResponse("Warszawa"));
         return "weather";
     }
-    //kontroller musi wywolac metode, metoda zwroci response dto. to przekazuje do HTML
-
 
     @ExceptionHandler(RuntimeException.class)
-    public String HandleExeption(){
+    public String HandleExeption() {
         return "nodata";
     }
 
