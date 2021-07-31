@@ -2,26 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{/style.css}" rel="stylesheet" href="css/bootstrap.min.css"/>
     <title>Aktualna pogoda</title>
 </head>
 <body>
 <section>
-<table th:object="${city}">
-    <tr>
-        <td> temperatura [stC]</td>
-        <td>ciśnienie [Ps]</td>
-        <td>wilgotność</td>
-        <td>siła wiatru</td>
-    </tr>
-    <tr>
-        <td th:text="${city.getMain().getTemp()}">temperatura</td>
-        <td th:text="${city.getMain().getPressure()}">ciśnienie</td>
-        <td th:text="${city.getMain().getHumidity()}">wilgotność</td>
-        <td th:text="${city.getWind().getSpeed()}">siła wiatru</td>
-    </tr>
-</table>
+    <table class="table-danger" th:object="${city}">
+        <thead>
+        <tr>
+            <th class="table-danger">temperatura [°C]</th>
+            <th class="table-danger">ciśnienie atmosferyczne [hPa]</th>
+            <th class="table-danger">wilgotność [%]</th>
+            <th class="table-danger">siła wiatru [km/h]</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="table-danger" th:text="${city.getMain().getTemp()}">temperatura</td>
+            <td class="table-danger" th:text="${city.getMain().getPressure()}">ciśnienie</td>
+            <td class="table-danger" th:text="${city.getMain().getHumidity()}">wilgotność</td>
+            <td class="table-danger" th:text="${city.getWind().getSpeed()}">siła wiatru</td>
+        </tr>
+        </tbody>
+    </table>
 
+    <a href="/">Back to main page</a>
 </section>
-
 </body>
 </html>

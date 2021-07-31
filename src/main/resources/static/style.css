@@ -77,3 +77,9 @@ ul > li {
 .methods figcaption{
     margin-top: 8px;
 }
+
+.table-danger{
+    max-width: 100%;
+    margin-top: 250px;
+    font: 28px Arial;
+}

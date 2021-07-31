@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WeatherController {
@@ -19,9 +21,9 @@ public class WeatherController {
         return "index";
     }
 
-    @GetMapping("/weather")
-    public String showWeather(Model model) {
-        model.addAttribute("city", weatherService.weatherResponse("Warszawa"));
+    @PostMapping("/weather")
+    public String showWeather(@RequestParam(name="city") String city, Model model) {
+        model.addAttribute("city", weatherService.weatherResponse(city));
         return "weather";
     }
 
