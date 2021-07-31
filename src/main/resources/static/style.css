@@ -1,0 +1,85 @@
+#container {
+    width: 80%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    margin-top: 20px;
+    font-size: 44px;
+}
+
+
+#menu {
+
+}
+
+#footer {
+    padding: 60px;
+
+}
+
+body {
+    background-image: url("/images/ziola.jpg");
+    background-size: cover;
+    font-family: Verdana;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+
+a:link {
+    color: firebrick;
+}
+
+a:visited {
+    color: firebrick;
+}
+
+a:hover {
+    color: green;
+}
+
+p {
+    font-style: oblique;
+}
+
+ul > li {
+    float: left;
+    width: 150px;
+    height: 50px
+}
+
+.link{
+
+    margin: 150px;
+    padding-bottom: unset;
+}
+
+.methods{
+    text-align: center;
+}
+
+.methods img{
+    max-width: 100%;
+    height: auto;
+}
+
+.methods figcaption{
+    margin-top: 8px;
+}
+
+.table-danger{
+    max-width: 100%;
+    margin-top: 250px;
+    font: 28px Arial;
+}

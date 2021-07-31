@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
+    <title>Aktualna pogoda</title>
+</head>
+<body>
+<form th:action="@{/weather}" method="post">
+   <label for="city">Miasto</label>
+          <input type="text" id="city" th:name="city"/>
+    <button>Sprawdź prognozę pogody w Twoim mieśćie</button>
+</form>
+</body>
+</html>

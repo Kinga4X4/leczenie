@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf"
+      link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Naturalne metody leczenia</title>
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v10.0"
+        nonce="CNdx9s3S">
+
+</script>
+<div id="container">
+    <h1>Naturalne metody leczenia
+    </h1>
+
+    <div id="logo">
+
+    </div>
+
+    <div id="menu">
+
+    </div>
+    <h3>
+        <ul class="list-group list-group-flush">
+            <li th:each="sposobLeczenia: ${sposobyLeczenia}">
+                <a th:href="'/sposobLeczenia/' + ${sposobLeczenia.id}|"
+                   th:text="${sposobLeczenia.nazwa}">
+                </a>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
+                     data-layout="box_count" data-action="like" data-size="small" data-share="false"></div>
+                <p><img src="x.jpg" alt="jakies zdjecie" width="42" height="42" style="vertical-align:bottom"></p>
+            </li>
+        </ul>
+    </h3>
+
+    <div id="footer">
+        Twoje zdrowie, w Twoich rękach! Zamień chemię na naturalne środki a Twój organizm Ci podziękuje.
+    </div>
+    <a href="/">Powrót do strony głównej</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>ModificationLoggedUser</title>
+</head>
+<body>
+<img src="/images/logo.jpg" style="float: left; margin-right: 20px; width: 250px;"/>
+<h1>Logged User modify</h1>
+<form action="#" method="post" th:action="@{/modifyLoggedUser/user.id}" th:object="${user}">
+
+    <input th:field="*{id}" type="hidden" placeholder="Id"/><br/>
+    <p th:errors="*{lastName}">first Name errors</p>
+    <input th:field="*{lastName}" type="text" placeholder="Last name"/><br/>
+    <p th:errors="*{firstName}">last Name errors</p>
+    <input th:field="*{firstName}" type="text" placeholder="First name"/><br/>
+    <p th:errors="*{password}">Password errors</p>
+    <input th:field="*{password}" type="password" placeholder="Password"/><br/>
+    <input type="submit" value="Modify logged User"/>
+</form>
+
+</body>
+</html>

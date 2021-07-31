@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user</title>
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h1>Add user</h1>
+
+<form method="post" th:action="@{/user/add}" th:object="${user}">
+
+    <input type="text" th:field="*{firstName}" placeholder="first name"/>
+    <input type="text" th:field="*{lastName}" placeholder="last name"/>
+    <input type="date" th:field="*{dateOfBirth}" placeholder="date of birth"/>
+    <input type="text" th:field="*{email}" placeholder="e-mail"/>
+
+    <select class="form-control" th:field="*{isNewsletter}">
+        <option th:value="true">true</option>
+        <option th:value="false">false</option>
+    </select>
+
+    <input type="submit" value="add!"/>
+</form>
+<div>
+<a href="/">Back to main page</a>
+</div>
+</body>
+</html>
